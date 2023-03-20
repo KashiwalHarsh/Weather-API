@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.58)),
+        url(https://source.unsplash.com/1920x1080/?rain&weather);
+}
+
+
+.nav {
+    /* border: 2px solid red; */
+    height: 15vh;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-left img {
+    width: 150px;
+    margin: 40px 0px 0px 0px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    margin: 15px 40px 15px 0px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 12px 10px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: #58629b;
+    cursor: pointer;
+}
+
+.search-bar button i {
+    font-size: 1rem;
+    color: white;
+}
+
+.main-center {
+    /* border: 2px solid red; */
+    height: 45vh;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.weather-center {
+    /* border: 2px solid red; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+}
+
+.weather-common h2 {
+    font-family: 'Lilita One', cursive;
+    color: white;
+    letter-spacing: 1.2px;
+    font-weight: 100;
+    text-transform: capitalize;
+    padding: 0px 0px 8px 0px;
+}
+
+/* .weather-city{
+    border: 2px solid red;
+} */
+.weather-city h2 {
+    font-size: 3.5rem;
+}
+
+/* .weather-temp{
+    border: 2px solid red;
+} */
+.weather-temp h2 {
+    font-size: 2.8rem;
+}
+
+/* .weather-desc{
+    border: 2px solid red;
+} */
+.weather-desc h2 {
+    font-size: 2.8rem;
+}
+
+
+.main-bottom {
+    /* border: 2px solid red; */
+    height: 30vh;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.bottom-left {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bottom-left h1 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 100;
+    margin: 0px 0px 0px 60px;
+
+}
+.bottom-right {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bottom-right .direction{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.bottom-right h1 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 100;
+    margin: 0px 60px 0px 0px;
+}
+
+
+/* ------------------------mobile----------------- */
+
+@media only screen and (max-width: 640px) {
+
+    .nav {
+        height: 20vh;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav-left {
+        margin-left: 0px;
+    }
+
+    .nav-left img {
+        width: 120px;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .nav-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-bar {
+        margin: 15px 0px 15px 0px;
+
+    }
+
+
+    .main-center {
+        height: 40vh;
+        margin-bottom: 1rem;
+    }
+
+    .weather-city h2 {
+        font-size: 3rem;
+    }
+
+    .weather-temp h2 {
+        font-size: 2.3rem;
+    }
+
+    .weather-desc h2 {
+        font-size: 2.3rem;
+    }
+
+    .main-bottom {
+        height: 20vh;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        flex-direction: column-reverse;
+
+    }
+    .bottom-left {
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .bottom-left h1 {
+        margin: 0px;
+    }
+    .bottom-right {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .bottom-right .direction{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    .bottom-right h1 {
+        margin: 0px;
+    }
+    
+}

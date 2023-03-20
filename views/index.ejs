@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popupS.css">
+</head>
+<style>
+    body {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.58)),
+        url(https://source.unsplash.com/1920x1080/?nature&<%=weatherImg%>&weather&sky&<%=location%>);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-left">
+                <img src="images/logo.png" >
+            </div>
+            <div class="nav-right">
+                <form action="/" method="post" class="search-bar">
+                    <input type="text" placeholder="Search by City" name="cityName" autocomplete="off">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="main-center">
+            <div class="weather-center">
+                <div class="weather-city weather-common">
+                    <h2> <%= location %> </h2>
+                </div>
+                <div class="weather-temp weather-common">
+                    <h2> <%= tempNow %> °C</h2>
+                </div>
+                <div class="weather-desc weather-common">
+                    <h2> <%= description %></h2>
+                </div>
+            </div>
+        </div>
+        <div class="main-bottom">
+            <div class="bottom-left">
+                <h1><%= Time %></h1>
+                <h1><%= Date %></h1>
+            </div>
+            <div class="bottom-right">
+                <div class="direction">
+                    <h1>Feels-like &nbsp;&nbsp;:&nbsp;&nbsp; <%= feels %> °C</h1>
+                    <h1>Humidity &nbsp;&nbsp;:&nbsp;&nbsp; <%= humidity %> %</h1>
+                    <h1>Wind-Speed &nbsp;&nbsp;:&nbsp;&nbsp; <%= wind %> m/s</h1>
+                </div>   
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
+<!-- left side time
+    right side search bar for temperature -->
+    <!-- container for information about Weather and display city name -->
+    <!-- kuch toh creative and unique dalna h -->
