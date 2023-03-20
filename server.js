@@ -61,7 +61,7 @@ app.post("/",function(req,res){
 
 })
 
-const port = process.env.PORT;
-app.listen(port || 3000,function(){
+const PORT = process.env.PORT || 3000
+app.listen(PORT,function(){
     console.log("server is running on 3000")
 })
