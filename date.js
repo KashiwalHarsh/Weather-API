@@ -16,5 +16,5 @@ exports.getTime = function(){
 
     const today = new Date();
     var options = {timeZone: "Asia/Kolkata"};
-    return today.toLocaleTimeString("en-us")
+    return today.toLocaleTimeString("en-us",options)
 }
