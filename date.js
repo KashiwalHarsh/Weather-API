@@ -15,6 +15,6 @@ exports.getDate  = function(){
 exports.getTime = function(){
 
     const today = new Date();
-    
+    var options = {timeZone: "IST"};
     return today.toLocaleTimeString("en-us")
 }
