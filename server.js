@@ -2,7 +2,9 @@ const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
 const today = require(__dirname+"/date.js")
-let alert = require('alert'); 
+let alert = require('alert');
+
+//npm i notify is good alternative for alert
 
 
 
